@@ -1,8 +1,12 @@
-const CategoryTemplate = () => {
+import { Link } from "react-router-dom"
+
+const CategoryTemplate = (props) => {
     return (
         <article className="CategoryItem">
-            <p>Category Name</p>
-            <img src="CategoryPicture" alt="categoryDescription" />
+            <Link className="link" to={`/category/${props.name}`}>
+                <p>{props.name}</p>
+                <img src={props.picture} alt={props.name} />
+            </Link>
         </article>
     );
 }
