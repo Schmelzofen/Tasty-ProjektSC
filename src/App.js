@@ -3,6 +3,7 @@ import ApiData from './json/DataBase';
 import { Api } from './json/DataBase';
 import Header from "./components/Header/Header"
 
+import SubCategori from './components/SubCategory/SubCategory'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       {console.log(Api)}
       <Header />
 
+      <SubCategori />
     </div>
   );
 }
