@@ -10,6 +10,7 @@ import Footer from "./components/Footer/Footer"
 import Category from './components/Category/Category';
 import SubCategory from './components/SubCategory/SubCategory';
 import Detail from './components/Detail/Detail';
+import CategoryTemplate from "./components/Category/CategoryTemplate"
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Header />
         <Routes>
           <Route path='/' element={<Category />} />
-          <Route path='/' element={<SubCategory />} />
+          <Route path='/category/:id' element={<CategoryTemplate />} />
           <Route path='/' element={<Detail />} />
         </Routes>
       </Router>
