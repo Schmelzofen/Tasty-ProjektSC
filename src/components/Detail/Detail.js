@@ -1,4 +1,3 @@
-
 import DetailTemplate from "./DetailTemplate"
 
 const Detail = () => {

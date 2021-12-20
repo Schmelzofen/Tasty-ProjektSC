@@ -1,3 +1,4 @@
+
 const CategoryTemplate = () => {
     return (
         <article className="CategoryItem">
