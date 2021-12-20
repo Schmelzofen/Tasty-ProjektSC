@@ -2,11 +2,10 @@ import './App.scss';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Category from './components/Category/Category';
 import CategoryTemplate from "./components/Category/CategoryTemplate"
+import SubCategory from "./components/SubCategory/SubCategory"
 
 // Header and Footer
 import Header from "./components/Header/Header"
-import SubCaterogy from "./components/SubCategory/SubCategory"
-import SubCategori from './components/SubCategory/SubCategory'
 
 function App() {
   return (
@@ -15,9 +14,9 @@ function App() {
       <Header />
       <Router>
       <Category/>
-      {/* <Routes>
-        <Routes path="/SubCategory/:id" component={<CategoryTemplate/>}/>
-      </Routes> */}
+     <Routes>
+        <Route path="/SubCategory/:id" element={<SubCategory/>}/>
+      </Routes> 
       </Router> 
      
     </div>

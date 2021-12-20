@@ -1,10 +1,11 @@
 import {Link} from "react-router-dom"
 import CategoriesJson from '../../json/categories.json'
 
+
 const CategoryTemplate = (props) => {
 
     return (
-        <Link to={`/SubCategory/${props.idCategory}`} >
+        <Link to={`/SubCategory/${props.id}`} >
             <article className="CategoryItem">
             <p>{props.title}</p>
             <img src={props.src} alt="categoryDescription" />

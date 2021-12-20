@@ -13,7 +13,7 @@ class Category extends Component {
         let Array = this.state.cats
         Array.push(CategoriesJson.categories)
         let Array2 = Array[0]
-        console.log(Array2);
+       console.log(Array2);
        
         return (
             <section className="Category">
