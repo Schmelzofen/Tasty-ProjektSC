@@ -1,9 +1,9 @@
 
-const CategoryTemplate = () => {
+const CategoryTemplate = (props) => {
     return (
         <article className="CategoryItem">
-            <p>Category Name</p>
-            <img src="CategoryPicture" alt="categoryDescription" />
+            <p>{props.name}</p>
+            <img src={props.picture} alt={props.name} />
         </article>
     );
 }
