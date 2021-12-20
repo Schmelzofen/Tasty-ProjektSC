@@ -25,6 +25,9 @@ class SubCategory extends Component {
                 <article className="SubCategoryGridContainer">
                     {this.state.subData.map(e => <SubCategoryTemplate
                         name={e.strMeal}
+                        picture={e.strMealThumb}
+                        key={e.idMeal}
+                        id={e.idMeal}
                     />)}
                 </article>
             </section>);

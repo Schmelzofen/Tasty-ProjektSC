@@ -12,6 +12,7 @@ import SubCategory from './components/SubCategory/SubCategory';
 import Detail from './components/Detail/Detail';
 import CategoryTemplate from "./components/Category/CategoryTemplate"
 import GetId from "./components/SubCategory/GetId"
+import GetId2 from "./components/Detail/GetId2"
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Category />} />
           <Route path='/category/:id' element={<GetId />} />
-          <Route path='/' element={<Detail />} />
+          <Route path='/details/:id' element={<GetId2 />} />
         </Routes>
       </Router>
       <Footer />
