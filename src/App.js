@@ -8,9 +8,6 @@ import Footer from "./components/Footer/Footer"
 
 // Pages
 import Category from './components/Category/Category';
-import SubCategory from './components/SubCategory/SubCategory';
-import Detail from './components/Detail/Detail';
-import CategoryTemplate from "./components/Category/CategoryTemplate"
 import GetId from "./components/SubCategory/GetId"
 import GetId2 from "./components/Detail/GetId2"
 
