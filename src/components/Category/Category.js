@@ -3,8 +3,11 @@ import React, { Component } from 'react';
 
 
 class Category extends React.Component {
-    state = {
-        myArr: [],
+    constructor(props) {
+        super(props);
+        this.state = {
+            myArr: [],
+        }
     }
 
 
