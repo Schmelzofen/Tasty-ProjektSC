@@ -24,7 +24,7 @@ class SubCategory extends Component {
                 <h1>Everything Beef</h1>
                 <article className="SubCategoryGridContainer">
                     {this.state.subData.map(e => <SubCategoryTemplate
-                        name={e.strMeal}
+                        name={e.strMeal.slice(0, 37)}
                         picture={e.strMealThumb}
                         key={e.idMeal}
                         id={e.idMeal}
