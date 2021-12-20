@@ -24,8 +24,8 @@ class Category extends React.Component {
                 <h1>Or go through our categories</h1>
                 <article className="CategoryGridContainer">
                     {this.state.myArr.map(item => <CategoryTemplate
-                        id={item.idCategory}
-                        key={item.idCategory}
+                        id={item.strCategory}
+                        key={item.strCategory}
                         name={item.strCategory}
                         picture={item.strCategoryThumb}
                     />)}
