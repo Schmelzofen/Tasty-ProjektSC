@@ -89,6 +89,22 @@
   grid-template-columns: 1fr 1fr;
   margin: 0 6%;
   gap: 10px;
+
+  .SubCategoryItem {
+    border-radius: 10px;
+
+    img {
+      width: 80%;
+    }
+
+    &:nth-of-type(odd) {
+      background: #FF6E86;
+    }
+
+    &:nth-of-type(even) {
+      background: #FFAC61;
+    }
+  }
 }
 
 .DetailItem {
@@ -114,4 +130,5 @@
 
 .link {
   text-decoration: none;
+  color: white;
 }
