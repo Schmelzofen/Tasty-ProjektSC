@@ -1,18 +1,28 @@
 import './App.scss';
-import ApiData from './json/DataBase';
-import { Api } from './json/DataBase';
-import Header from "./components/Header/Header"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import SubCategori from './components/SubCategory/SubCategory'
+// Header and Footer
+import Header from "./components/Header/Header"
+import Footer from "./components/Footer/Footer"
+
+
+// Pages
+import Category from './components/Category/Category';
+import SubCategory from './components/SubCategory/SubCategory';
+import Detail from './components/Detail/Detail';
 
 function App() {
   return (
     <div className="App">
-      <ApiData />
-      {console.log(Api)}
-      <Header />
-
-      <SubCategori />
+      <Router>
+        <Header />
+        <Routes>
+          <Route path='/' element={<Category />} />
+          <Route path='/' element={<SubCategory />} />
+          <Route path='/' element={<Detail />} />
+        </Routes>
+      </Router>
+      <Footer />
     </div>
   );
 }

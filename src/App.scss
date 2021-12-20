@@ -3,3 +3,29 @@
 .Header {
   text-align: center;
 }
+
+.CategoryGridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 3%;
+  gap: 15px;
+}
+
+.SubCategoryGridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 6%;
+  gap: 10px;
+}
+
+.DetailItem {
+  .DetailLeft {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .DetailRight {
+    display: flex;
+    flex-direction: column;
+  }
+}

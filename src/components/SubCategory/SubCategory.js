@@ -1,20 +1,9 @@
 import SubCategoryTemplate from "./SubCategoryTemplate";
-
-const SubCategory = () => {
-    return (
-        <section className="SubCategory">
-            <h1>Everything Beef</h1>
-            <article className="SubCategoryGridContainer">
-
-            </article>
-        </section>
-    );
-
-}
-import SubCategory from "./SubCategoryTemplate";
 import React, { Component } from 'react';
 
-class SubCategori extends Component {
+
+
+class SubCategory extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -34,10 +23,13 @@ class SubCategori extends Component {
 
     render() {
         return (
-            <div>
+            <section className="SubCategory">
+                <h1>Everything Beef</h1>
+                <article className="SubCategoryGridContainer">
 
-            </div>);
+                </article>
+            </section>);
     }
 }
 
-export default SubCategori;
+export default SubCategory;
