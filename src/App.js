@@ -1,9 +1,10 @@
 import './App.scss';
+import SubCategori from './components/SubCategory/SubCategory'
 
 function App() {
   return (
     <div className="App">
-      <h1>Semir</h1>
+      <SubCategori/>
     </div>
   );
 }
