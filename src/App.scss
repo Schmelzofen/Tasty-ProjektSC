@@ -1,5 +1,81 @@
-.App {}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+}
 
 .Header {
   text-align: center;
+  padding: 2% 0 0 0;
+  color: #FF6E86;
+
+  h1 {
+    padding: 2% 0;
+    font-size: 2.3rem;
+  }
+
+  input {
+    margin-right: .5%;
+    padding: .5% 1.5%;
+    border-radius: 5px;
+    border: none;
+    background: #FFAC614D;
+
+    &::placeholder {
+      color: #FF6E86;
+      text-align: left;
+      font-size: .7rem;
+      font-weight: bold;
+    }
+  }
+
+  button {
+    background: #FF6E86;
+    border: none;
+    padding: .5% 1.5%;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+  }
+}
+
+.Category {
+  padding: 0 0 0 5%;
+
+  .CategoryGridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 3%;
+    gap: 15px;
+  }
+}
+
+.SubCategoryGridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 6%;
+  gap: 10px;
+}
+
+.DetailItem {
+  .DetailLeft {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .DetailRight {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.Footer {
+  text-align: center;
+
+  img {
+    padding: 0 10px;
+  }
 }
