@@ -1,9 +1,16 @@
 import './App.scss';
+import ApiData from './json/DataBase';
+import { Api } from './json/DataBase';
+import Header from "./components/Header/Header"
+
 
 function App() {
   return (
     <div className="App">
-      <h1>Semir</h1>
+      <ApiData />
+      {console.log(Api)}
+      <Header />
+
     </div>
   );
 }

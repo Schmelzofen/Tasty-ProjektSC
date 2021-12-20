@@ -1,3 +1,5 @@
+import SubCategoryTemplate from "./SubCategoryTemplate";
+
 const SubCategory = () => {
     return (
         <section className="SubCategory">
@@ -7,6 +9,7 @@ const SubCategory = () => {
             </article>
         </section>
     );
+
 }
 
 export default SubCategory;
