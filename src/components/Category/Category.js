@@ -21,6 +21,7 @@ class Category extends React.Component {
     render() {
         return (
             <section className="Category">
+                <input type="text" name="" id="" />
                 <h1>Or go through our categories</h1>
                 <article className="CategoryGridContainer">
                     {this.state.myArr.map(item => <CategoryTemplate

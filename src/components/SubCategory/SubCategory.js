@@ -1,6 +1,6 @@
 import SubCategoryTemplate from "./SubCategoryTemplate";
 import React, { Component } from 'react';
-
+import Meals from "../../json/Meals.json"
 
 
 class SubCategory extends Component {
@@ -18,9 +18,10 @@ class SubCategory extends Component {
     }
 
     render() {
-        console.log(this.state.subData)
+        console.log({ Meals })
         return (
             <section className="SubCategory">
+                <input type="text" name="" id="" />
                 <h1>Everything Beef</h1>
                 <article className="SubCategoryGridContainer">
                     {this.state.subData.map(e => <SubCategoryTemplate
