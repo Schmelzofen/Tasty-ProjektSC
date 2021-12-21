@@ -28,19 +28,22 @@ class Header extends Component {
             }
             this.setState({ results: tempArray })
         }
-        console.log(tempArray)
+        // console.log(tempArray)
         return (
             <section className="Header">
                 <Link to="/"><img src={navLogo} alt="navLogo" /></Link>
                 <h1>Find a recipe, an idea, an inspiration...</h1>
                 <input id="field" type="text" placeholder="Type something to search" />
-                <button onClick={search} ><Link to='/Search' >Search</Link></button>
-                {tempArray.map(i => <SubCategoryTemplate
+                <button  ><Link to='/Search' >Search</Link></button>
+                {/* {tempArray.map(i => <SubCategoryTemplate
                     key={uuidv4}
                     id={i.idMeal}
                     name={i.strMeal}
                     picture={i.strMealThumb}
-                />)}
+                />)} */}
+                {/* {tempArray.map(i => <p>
+                    {i.strMeal}
+                </p>)} */}
             </section>
         );
     }
