@@ -16,7 +16,7 @@ class Header extends Component {
             <section className="Header">
                 <Link to="/"><img src={navLogo} alt="navLogo" /></Link>
                 <h1>Find a recipe, an idea, an inspiration...</h1>
-                <input id="field" type="text" placeholder="Type something to search" />
+               
                 <button  onClick={this.props.search}><Link to='/Search' >Search</Link></button>
                 
             </section>

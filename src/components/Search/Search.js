@@ -13,14 +13,18 @@ class Search extends React.Component {
         meals: Meals.meals,
         results: [],
     }
-
+   
+     
+    
     search = () => {
+        
         tempArray = []
         this.setState({ results: [] })
         let input = document.getElementById('field')
         field = input.value
         field = field.toLowerCase()
         console.log(field);
+        
         for (let i = 0; i < this.state.meals.length; i++) {
             if ((this.state.meals[i].strMeal.toLowerCase()).includes(field)) {
                 tempArray.push(this.state.meals[i]);
@@ -29,10 +33,13 @@ class Search extends React.Component {
            
         }
         this.setState({ results: tempArray })
-        
-    }
-
     
+    }
+    searchnew=()=>{
+        const timer=setTimeout(() =>{
+        this.search()
+    },1000)
+    }
     render() {
        
         
@@ -40,10 +47,14 @@ class Search extends React.Component {
         return (
             <div>
                 
-               <Header search={this.search}/>
+               <Header search={this.searchnew}/>
                 {this.state.results.map(e=>
+                <div>
                     <p>{e.strMeal}</p>
+                    <img src={e.strMealThumb} alt="" />
+                    </div>
                     )}
+
             </div>
         )
     }

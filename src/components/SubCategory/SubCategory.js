@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Meals from "../../json/Meals.json"
 import SubCategoryTemplate from "../../components/SubCategory/SubCategoryTemplate"
-
+import HeaderAll from '../Header/HeaderAll'
 class SubCategory extends Component {
     constructor(props) {
         super(props);
@@ -21,6 +21,7 @@ class SubCategory extends Component {
         console.log({ Meals })
         return (
             <section className="SubCategory">
+                <HeaderAll/>
                 <h1>Delicious food!</h1>
                 <article className="SubCategoryGridContainer">
                     {this.state.subData.map(e => <SubCategoryTemplate
