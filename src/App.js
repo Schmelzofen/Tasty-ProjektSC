@@ -10,6 +10,7 @@ import Footer from "./components/Footer/Footer"
 import Category from './components/Category/Category';
 import GetId from "./components/SubCategory/GetId"
 import GetId2 from "./components/Detail/GetId2"
+import Search from "./components/Search/Search"
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path='/' element={<Category />} />
           <Route path='/category/:id' element={<GetId />} />
           <Route path='/details/:id' element={<GetId2 />} />
+          <Route path="/search" element={<Search />} />
         </Routes>
       </Router>
       <Footer />

@@ -55,6 +55,7 @@ class Detail extends React.Component {
                     zutat13={i.strIngredient13}
                     zutat14={i.strIngredient14}
                     zutat15={i.strIngredient15}
+                    youtube={i.strYoutube}
                 />)}
             </div>
         )

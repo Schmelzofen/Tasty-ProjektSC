@@ -21,8 +21,7 @@ class SubCategory extends Component {
         console.log({ Meals })
         return (
             <section className="SubCategory">
-                <input type="text" name="" id="" />
-                <h1>Everything Beef</h1>
+                <h1>Delicious food!</h1>
                 <article className="SubCategoryGridContainer">
                     {this.state.subData.map(e => <SubCategoryTemplate
                         name={e.strMeal.slice(0, 37)}

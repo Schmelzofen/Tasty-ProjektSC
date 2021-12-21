@@ -1,4 +1,4 @@
-const DetailTemplate = ({ name, picture, instructions, zutat1, zutat2, zutat3, zutat4, zutat5, zutat6, zutat7, zutat8, zutat9, zutat10, zutat11, zutat12, zutat13, zutat14, zutat15, mass1, mass2, mass3, mass4, mass5, mass6, mass7, mass8, mass9, mass10, mass11, mass12, mass13, mass14, mass15 }) => {
+const DetailTemplate = ({ youtube, name, picture, instructions, zutat1, zutat2, zutat3, zutat4, zutat5, zutat6, zutat7, zutat8, zutat9, zutat10, zutat11, zutat12, zutat13, zutat14, zutat15, mass1, mass2, mass3, mass4, mass5, mass6, mass7, mass8, mass9, mass10, mass11, mass12, mass13, mass14, mass15 }) => {
     return (
         <section className="DetailItem">
             <img src={picture} alt={name} />
@@ -71,7 +71,7 @@ const DetailTemplate = ({ name, picture, instructions, zutat1, zutat2, zutat3, z
                             <span>{zutat15}</span>
                         </div>
                     </ul>
-                    <button className="button"><a href="">Watch on YouTube</a></button>
+                    <button className="button"><a href={youtube}>Watch on YouTube</a></button>
                 </article>
             </section>
         </section >
