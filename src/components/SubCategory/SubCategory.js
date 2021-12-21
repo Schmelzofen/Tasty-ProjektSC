@@ -1,6 +1,7 @@
 import SubCategoryTemplate from "./SubCategoryTemplate";
 import React, { Component } from 'react';
 import Meals from "../../json/Meals.json"
+import { v4 as uuidv4 } from 'uuid';
 
 
 class SubCategory extends Component {
@@ -26,7 +27,7 @@ class SubCategory extends Component {
                     {this.state.subData.map(e => <SubCategoryTemplate
                         name={e.strMeal.slice(0, 37)}
                         picture={e.strMealThumb}
-                        key={e.idMeal}
+                        key={uuidv4()}
                         id={e.idMeal}
                     />)}
                 </article>
