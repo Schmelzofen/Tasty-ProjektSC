@@ -4,6 +4,7 @@ import SubCategoryTemplate from "../SubCategory/SubCategoryTemplate"
 import { useParams } from 'react-router-dom';
 
 var searchedData = []
+// generates a new array, using input value
 function generateData(searchWord,array){
     searchedData = []
     for (let i = 0; i < array.length; i++) {
@@ -14,9 +15,10 @@ function generateData(searchWord,array){
 }
 
 const Search = () => {
+    // use params brings the last element of address bar in browser 
     let {query} = useParams()
+
     generateData(query,Meals.meals)
-    console.log(searchedData)
     return ( <div className="Search">
         {searchedData.map(i => <SubCategoryTemplate
             key={uuidv4()}
