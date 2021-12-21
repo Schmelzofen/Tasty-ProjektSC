@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import Header from '../Header/Header'
-import CategoryTemplate from "../Category/CategoryTemplate"
-
+import HeaderAll from '../Header/HeaderAll'
+import CategoryTemplate from "./CategoryTemplate"
 class Category extends Component {
     constructor(props) {
         super(props);
@@ -24,7 +23,7 @@ class Category extends Component {
         return (
             
             <section className="Category">
-                <Header/>
+               <HeaderAll/>
                 <h1>Or go through our categories</h1>
                 <article className="CategoryGridContainer">
                     {this.state.myArr.map(item => <CategoryTemplate
