@@ -1,12 +1,13 @@
 import CategoryTemplate from "./CategoryTemplate"
 import React, { Component } from 'react';
-import { Link } from "react-router-dom"
+
 
 class Category extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             myArr: [],
+            val: "",
         }
     }
 
@@ -15,6 +16,7 @@ class Category extends React.Component {
         fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
             .then(response => response.json())
             .then(json => this.setState({ myArr: json.categories }, () => {
+                console.log(this.state.myArr)
             }))
     }
     render() {
