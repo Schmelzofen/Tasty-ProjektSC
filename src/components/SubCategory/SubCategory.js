@@ -1,14 +1,8 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
-import CategoriesJson from "../../json/categories.json"
-import SubCategoryTemplate from "../SubCategory/SubCategoryTemplate"
-class SubCaterogy extends React.Component {
-=======
 import Meals from "../../json/Meals.json"
-
+import SubCategoryTemplate from "../../components/SubCategory/SubCategoryTemplate"
 
 class SubCategory extends Component {
->>>>>>> b98b33797dc61a71f9d295836f21d615c21ed213
     constructor(props) {
         super(props);
         this.state = {
@@ -40,6 +34,6 @@ class SubCategory extends Component {
     }
 }
  
-export default SubCaterogy;
+export default SubCategory;
 
 

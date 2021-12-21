@@ -17,13 +17,13 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
+        
         <Routes>
           <Route path='/' element={<Category />} />
           <Route path='/category/:id' element={<GetId />} />
           <Route path='/details/:id' element={<GetId2 />} />
           <Route path='/Search' element={<Search />} />
-          {/*           <Route path="/search/:query" element={<Search />} /> */}
+          
         </Routes>
       </Router>
       <Footer />
