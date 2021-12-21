@@ -24,14 +24,14 @@ class Search extends React.Component {
         }
         search()
         return (
-            {
-                tempArray.map(i => <SubCategoryTemplate
+            <div>
+                {tempArray.map(i => <SubCategoryTemplate
                     key={uuidv4}
                     id={i.idMeal}
                     name={i.strMeal}
                     picture={i.strMealThumb}
-                />)
-            }
+                />)}
+            </div>
         )
     }
 }
