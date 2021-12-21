@@ -1,27 +1,39 @@
 import React, { Component } from 'react';
-import CategoriesJson from "../../json/categories.json"
-import SubCategoryTemplate from "../SubCategory/SubCategoryTemplate"
-import { useParams } from "react-router-dom";
-import { v4 as uuidv4 } from 'uuid';
+import Meals from "../../json/Meals.json"
+import SubCategoryTemplate from "../../components/SubCategory/SubCategoryTemplate"
 
-const SubCategory = (props) => {
-    let {title} = useParams()
-    let data = CategoriesJson.filter(i => i.title === props.id)
-    console.log(data)
+class SubCategory extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            subData: [],
+        }
+    }
+   
+    
+    componentDidMount() {
+        fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${this.props.name}`)
+            .then(response => response.json())
+            .then(json => this.setState({ subData: json.meals }))
+    }
 
-    return ( 
-        <div className='Subcategory' >
-            {data.map(i => <SubCategoryTemplate
-                key = {uuidv4()}
-                title = {i.strMeal}
-                src = {i.strMealThumb}
-            />)}
-        </div>
-     );
+    render() {
+        console.log({ Meals })
+        return (
+            <section className="SubCategory">
+                <h1>Delicious food!</h1>
+                <article className="SubCategoryGridContainer">
+                    {this.state.subData.map(e => <SubCategoryTemplate
+                        name={e.strMeal.slice(0, 37)}
+                        picture={e.strMealThumb}
+                        key={e.idMeal}
+                        id={e.idMeal}
+                    />)}
+                </article>
+            </section>);
+    }
 }
  
 export default SubCategory;
-
-// www.themealdb.com/api/json/v1/1/filter.php?c=Seafood
 
 

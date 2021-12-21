@@ -3,7 +3,11 @@ import CategoriesJson from '../../json/categories.json'
 
 
 const CategoryTemplate = (props) => {
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> main
     return (
         <Link to={`/SubCategory/${props.id}`} >
             <article className="CategoryItem">

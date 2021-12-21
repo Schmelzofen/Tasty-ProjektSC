@@ -14,45 +14,51 @@
 
   h1 {
     padding: 2% 0;
-    font-size: 2.3rem;
+    font-size: 3.7rem;
   }
 
   input {
     margin-right: .5%;
-    padding: .5% 1.5%;
+    padding: 1% 5%;
     border-radius: 5px;
     border: none;
     background: #FFAC614D;
+    color: #FF6E86;
+    font-weight: bold;
 
     &::placeholder {
       color: #FF6E86;
-      text-align: left;
-      font-size: .7rem;
-      font-weight: bold;
+      font-size: .8rem;
+      margin-right: -20px;
     }
   }
 
   button {
     background: #FF6E86;
     border: none;
-    padding: .5% 1.5%;
+    padding: 1% 2%;
     border-radius: 5px;
     color: white;
     font-weight: bold;
+    transform: .2s linear;
+
+    &:active {
+      transform: scale(.9);
+    }
   }
 }
 
 .Category {
   h1 {
-    padding: 3% 0 1% 6%;
+    padding: 3% 0 1% 14%;
     color: #FF6E86;
-    font-size: 2.2rem;
+    font-size: 3rem;
   }
 
   .CategoryGridContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin: 0 6%;
+    margin: 0 12%;
     padding: 3% 0 5% 0;
     gap: 20px;
 
@@ -67,7 +73,7 @@
       }
 
       p {
-        color: white;
+
         font-size: 1.5rem;
         font-weight: bolder;
         padding: 2% 0 0 0;
@@ -84,28 +90,97 @@
   }
 }
 
-.SubCategoryGridContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 0 6%;
-  gap: 10px;
+.SubCategory {
+  h1 {
+    padding: 3% 0 3% 14%;
+    color: #FFAC61;
+    font-size: 3rem;
+  }
+
+  .SubCategoryGridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 10%;
+    gap: 30px;
+    padding: 0 0 5% 0;
+
+    .SubCategoryItem {
+      border-radius: 10px;
+
+      p {
+        padding: 5% 3% 3% 15%;
+        font-weight: bolder;
+        font-size: 2.2rem;
+        height: 14vh;
+      }
+
+      img {
+        width: 80%;
+        margin: 0 0 5% 5%;
+        padding: 5% 0 4% 10%;
+      }
+
+      &:nth-of-type(odd) {
+        background: #FF6E86;
+      }
+
+      &:nth-of-type(even) {
+        background: #FFAC61;
+      }
+    }
+  }
 }
 
 .DetailItem {
-  .DetailLeft {
-    display: flex;
-    flex-direction: column;
+  text-align: center;
+  padding: 3% 0 5% 0;
+  background: #FF6E86;
+  margin: 3% 20%;
+  border-radius: 10px;
+
+  img {
+    width: 90%;
   }
 
-  .DetailRight {
+  .DetailFlex {
     display: flex;
-    flex-direction: column;
+
+    .DetailLeft {
+      display: inline-block;
+      width: 50%;
+      text-align: left;
+      padding: 2% 0% 0% 5.2%;
+
+      h2 {
+        padding: 0 0 5% 0;
+        font-size: 2.2rem;
+      }
+    }
+
+    .DetailRight {
+      display: inline-block;
+      width: 50%;
+      text-align: left;
+      font-weight: bolder;
+      padding: 2% 0% 0% 10%;
+      line-height: 4vh;
+
+      h2 {
+        padding: 2.5% 0 6% 0;
+        font-size: 2.2rem;
+      }
+
+      span:first-child {
+        padding-right: 10px;
+        font-size: 1.2rem;
+      }
+    }
   }
 }
 
 .Footer {
   text-align: center;
-  padding: 0 0 1% 0;
+  padding: 0 0 2% 0;
 
   img {
     padding: 0 10px;
@@ -114,4 +189,18 @@
 
 .link {
   text-decoration: none;
+}
+
+.button {
+  padding: 1% 3%;
+  background: white;
+  border: none;
+  border-radius: 5px;
+  margin: 12% 0 0 0;
+
+  a {
+    color: #FF6E86;
+    text-decoration: none;
+  }
+
 }

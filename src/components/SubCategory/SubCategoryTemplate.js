@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 
 const SubCategoryTemplate = (props) => {
+<<<<<<< HEAD
    
     
         return (
@@ -37,3 +38,16 @@ export default SubCategoryTemplate;
 
 // } 
 // export default SubCategoryTemplate;
+=======
+    return (
+        <article className="SubCategoryItem">
+            <Link className="link" to={`/details/${props.id}`}>
+                <p>{props.name}</p>
+                <img src={props.picture} alt={props.name} />
+            </Link>
+        </article>
+    );
+}
+
+export default SubCategoryTemplate;
+>>>>>>> main
