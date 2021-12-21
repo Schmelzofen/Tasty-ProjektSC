@@ -18,6 +18,7 @@ class Category extends React.Component {
             }))
     }
     render() {
+        
         return (
             <section className="Category">
                 <h1>Or go through our categories</h1>
@@ -29,6 +30,7 @@ class Category extends React.Component {
                         picture={item.strCategoryThumb}
                     />)}
                 </article>
+                
             </section>
         )
     }
