@@ -11,6 +11,7 @@ import Footer from "./components/Footer/Footer"
 import Category from './components/Category/Category';
 import GetId from "./components/SubCategory/GetId"
 import GetId2 from "./components/Detail/GetId2"
+import Random from "./components/Category/Random"
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path='/details/:id' element={<GetId2 />} />
           {/* <Route path='/Search' element={<Search />} /> */}
           <Route path="/search/:query" element={<Search />} />
+          <Route path="/random" element={<Random />} />
         </Routes>
       </Router>
       <Footer />

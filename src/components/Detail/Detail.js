@@ -2,12 +2,13 @@ import DetailTemplate from "./DetailTemplate"
 import React, { Component } from 'react';
 import { Link } from "react-router-dom"
 import { v4 as uuidv4 } from 'uuid';
-
+let test2 = [];
 class Detail extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             subData: [],
+            test: []
 
         }
     }
@@ -18,19 +19,41 @@ class Detail extends React.Component {
             .then(json => this.setState({ subData: json.meals }))
     }
 
-    fetchIngredients = () => {
-
-        this.state.subData.map(e => {
+    // fetchIngredients = () => {
+    //     console.log(this.state.subData)
+    //     this.state.subData.forEach(e => {
+    //         for (let i = 0; i < 20; i++) {
+    //             console.log(e.strIngredient1);
+    //         }
+    //     })
+    // }
+    fetchIngredients2 = () => {
+        console.log(this.state.subData)
+        this.state.subData.forEach(e => {
             for (let i = 0; i < 20; i++) {
-                test.push(`e.strIngredient${i}`);
+                let n = `strIngredient${i}`
+                let ne = `e.${n}`
+                if (eval(ne)) {
+                    // console.log(eval(ne));
+                    test2.push(eval(ne))
+                }
             }
-
         })
+        console.log(test2);
+
     }
-    // )
+
+
+
+
+
 
     render() {
 
+        // this.fetchIngredients()
+        this.fetchIngredients2()
+
+        console.log(this.state.test)
         return (
             <div>
                 {this.state.subData.map(i => <DetailTemplate
@@ -53,6 +76,7 @@ class Detail extends React.Component {
                     mass13={i.strMeasure13}
                     mass14={i.strMeasure14}
                     mass15={i.strMeasure15}
+
                     zutat1={i.strIngredient1}
                     zutat2={i.strIngredient2}
                     zutat3={i.strIngredient3}

@@ -81,6 +81,8 @@
 
       &:nth-of-type(odd) {
         background: #FFAC61;
+        text-align: center;
+
       }
 
       &:nth-of-type(even) {
@@ -189,6 +191,7 @@
 
 .link {
   text-decoration: none;
+  color: white;
 }
 
 .button {
@@ -229,4 +232,12 @@
   &:nth-of-type(even) {
     background: #FFAC61;
   }
+}
+
+.RandomBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: bold;
 }

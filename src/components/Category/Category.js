@@ -1,6 +1,6 @@
 import CategoryTemplate from "./CategoryTemplate"
 import React, { Component } from 'react';
-
+import { Link } from "react-router-dom"
 
 class Category extends React.Component {
     constructor(props) {
@@ -30,6 +30,9 @@ class Category extends React.Component {
                         name={item.strCategory}
                         picture={item.strCategoryThumb}
                     />)}
+                    <section className="CategoryItem RandomBox">
+                        <Link className="link" to="/random">Random</Link>
+                    </section>
                 </article>
             </section>
         )

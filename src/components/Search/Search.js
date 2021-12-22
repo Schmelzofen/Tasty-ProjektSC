@@ -5,10 +5,10 @@ import { useParams } from 'react-router-dom';
 
 var searchedData = []
 // generates a new array, using input value
-function generateData(searchWord,array){
+function generateData(searchWord, array) {
     searchedData = []
     for (let i = 0; i < array.length; i++) {
-        if ((array[i].strMeal.toLowerCase()).includes(searchWord)) {
+        if ((array[i].strMeal.toLowerCase()).includes(searchWord.toLowerCase())) {
             searchedData.push(array[i]);
         }
     }
@@ -16,17 +16,17 @@ function generateData(searchWord,array){
 
 const Search = () => {
     // use params brings the last element of address bar in browser 
-    let {query} = useParams()
+    let { query } = useParams()
 
-    generateData(query,Meals.meals)
-    return ( <div className="Search">
+    generateData(query, Meals.meals)
+    return (<div className="Search">
         {searchedData.map(i => <SubCategoryTemplate
             key={uuidv4()}
             id={i.idMeal}
             name={i.strMeal}
             picture={i.strMealThumb}
-        /> )}
-    </div> );
+        />)}
+    </div>);
 }
- 
+
 export default Search;
