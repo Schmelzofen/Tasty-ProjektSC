@@ -9,7 +9,7 @@
 
 .Header {
   text-align: center;
-  padding: 2% 0 0 0;
+  padding: 2% 0 5% 0;
   color: #FF6E86;
 
   h1 {
@@ -203,4 +203,29 @@
     text-decoration: none;
   }
 
+}
+
+.SubCategoryItem {
+  border-radius: 10px;
+  margin: 5%;
+  p {
+    padding: 5% 3% 3% 15%;
+    font-weight: bolder;
+    font-size: 2.2rem;
+    height: 14vh;
+  }
+
+  img {
+    width: 80%;
+    margin: 0 0 5% 5%;
+    padding: 5% 0 4% 10%;
+  }
+
+  &:nth-of-type(odd) {
+    background: #FF6E86;
+  }
+
+  &:nth-of-type(even) {
+    background: #FFAC61;
+  }
 }

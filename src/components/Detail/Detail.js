@@ -1,7 +1,7 @@
 import DetailTemplate from "./DetailTemplate"
 import React, { Component } from 'react';
-import {Link} from "react-router-dom"
-import HeaderAll from '../Header/HeaderAll'
+
+
 class Detail extends React.Component {
     constructor(props) {
         super(props);
@@ -20,7 +20,6 @@ class Detail extends React.Component {
         console.log(this.state.subData)
         return (
             <div>
-                <HeaderAll/>
                 {this.state.subData.map(i => <DetailTemplate
                     key={i}
                     name={i.strMeal}
