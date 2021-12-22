@@ -13,6 +13,7 @@ import GetId from "./components/SubCategory/GetId"
 import GetId2 from "./components/Detail/GetId2"
 
 
+
 function App() {
   return (
     <div className="App">
