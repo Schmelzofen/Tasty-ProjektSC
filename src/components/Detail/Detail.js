@@ -1,12 +1,14 @@
 import DetailTemplate from "./DetailTemplate"
 import React, { Component } from 'react';
-
+import { Link } from "react-router-dom"
+import { v4 as uuidv4 } from 'uuid';
 
 class Detail extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             subData: [],
+
         }
     }
 
@@ -16,12 +18,23 @@ class Detail extends React.Component {
             .then(json => this.setState({ subData: json.meals }))
     }
 
+    fetchIngredients = () => {
+
+        this.state.subData.map(e => {
+            for (let i = 0; i < 20; i++) {
+                test.push(`e.strIngredient${i}`);
+            }
+
+        })
+    }
+    // )
+
     render() {
-        console.log(this.state.subData)
+
         return (
             <div>
                 {this.state.subData.map(i => <DetailTemplate
-                    key={i}
+                    key={uuidv4()}
                     name={i.strMeal}
                     picture={i.strMealThumb}
                     instructions={i.strInstructions}
