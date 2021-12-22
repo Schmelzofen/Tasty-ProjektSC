@@ -9,6 +9,7 @@ const DetailTemplate = ({ youtube, name, picture, instructions, zutat, zutat1, z
 
         < section className="DetailItem" >
             <img src={picture} alt={name} />
+            <h2>Ingredients</h2>
             <section className="DetailFlex">
                 <article className="DetailLeft">
 
@@ -21,7 +22,14 @@ const DetailTemplate = ({ youtube, name, picture, instructions, zutat, zutat1, z
                     </ul>
                 </article>
                 <article className="DetailRight">
-                    <h2>Ingredients</h2>
+                    <ul className="Measure">
+                        <div className="strMeasure">
+                            {strMeasure.map(e =>
+                                <p>{e}</p>
+
+                            )}
+                        </div>
+                    </ul>
                     <ul className="Ingredients">
 
                         <div className="strIngredient">
@@ -32,14 +40,6 @@ const DetailTemplate = ({ youtube, name, picture, instructions, zutat, zutat1, z
                         </div>
                     </ul>
 
-                    <ul className="Measure">
-                        <div className="strMeasure">
-                            {strMeasure.map(e =>
-                                <p>{e}</p>
-
-                            )}
-                        </div>
-                    </ul>
                     <button className="button"><a href={youtube}>Watch on YouTube</a></button>
                 </article>
             </section>

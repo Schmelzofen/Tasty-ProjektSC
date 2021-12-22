@@ -1,6 +1,7 @@
 import CategoryTemplate from "./CategoryTemplate"
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from "react-router-dom"
+import Meals from '../../json/Meals.json'
 
 class Category extends React.Component {
     constructor(props) {
@@ -20,6 +21,8 @@ class Category extends React.Component {
             }))
     }
     render() {
+        let generateNum = (Math.floor(Math.random() * Meals.meals.length))
+        let random = Meals.meals[generateNum].idMeal
         return (
             <section className="Category">
                 <h1>Or go through our categories</h1>
@@ -31,7 +34,7 @@ class Category extends React.Component {
                         picture={item.strCategoryThumb}
                     />)}
                     <section className="CategoryItem RandomBox">
-                        <Link className="link" to="/random">Random</Link>
+                        <Link className="link" to={`/details/${random}`}>Random</Link>
                     </section>
                 </article>
             </section>

@@ -1,4 +1,4 @@
-
+import Random from "../Category/Random"
 import DetailTemplate from "./DetailTemplate"
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
@@ -28,7 +28,6 @@ class Detail extends React.Component {
             strDesc.pop()
             console.log(strDesc)
         });
-
         this.state.subData.forEach(e => {
             strIngredient = []
             for (let i = 0; i < 20; i++) {

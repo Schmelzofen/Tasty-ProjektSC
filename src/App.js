@@ -25,7 +25,7 @@ function App() {
           <Route path='/details/:id' element={<GetId2 />} />
           {/* <Route path='/Search' element={<Search />} /> */}
           <Route path="/search/:query" element={<Search />} />
-          <Route path="/random" element={<Random />} />
+          {/* <Route path="/random" element={<Random />} /> */}
         </Routes>
       </Router>
       <Footer />
