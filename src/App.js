@@ -11,7 +11,6 @@ import Footer from "./components/Footer/Footer"
 import Category from './components/Category/Category';
 import GetId from "./components/SubCategory/GetId"
 import GetId2 from "./components/Detail/GetId2"
-import Random from "./components/Category/Random"
 
 
 function App() {

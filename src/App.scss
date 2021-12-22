@@ -136,6 +136,41 @@
   }
 }
 
+.Search {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .SubCategoryItem {
+    border-radius: 10px;
+    width: 90%;
+    margin: 5%;
+
+    a {
+      p {
+        padding: 5% 5% 18% 15%;
+        font-weight: bolder;
+        font-size: 3.2vw;
+        height: 17vh;
+      }
+    }
+
+    img {
+      width: 80%;
+      margin: 0 0 5% 5%;
+      padding: 5% 0 4% 10%;
+      border-radius: 10px;
+    }
+
+    &:nth-of-type(odd) {
+      background: #FF6E86;
+    }
+
+    &:nth-of-type(even) {
+      background: #FFAC61;
+    }
+  }
+}
+
 .DetailItem {
   text-align: center;
   padding: 3% 0 5% 0;
@@ -308,7 +343,7 @@
   }
 
   .DetailItem {
-    margin: 0 5%;
+    margin: 0 6% 3% 6%;
 
     .DetailFlex {
       .DetailLeft {
@@ -321,66 +356,90 @@
     }
   }
 
-  .Footer {
-    margin: 5% 0 0 0;
+  .Search {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .SubCategoryItem {
+      border-radius: 10px;
+      width: 90%;
+      margin: 5%;
+
+      a {
+        p {
+          font-size: 3.2vw;
+          height: 17vh;
+        }
+
+        img {
+          margin: 0 0 5% 5%;
+          padding: 0% 0 4% 10%;
+        }
+      }
+
+    }
+
+    .Footer {
+      margin: 5% 0 0 0;
+    }
+
   }
 
-}
+  @media screen and (max-width: 375px) {
+    .CategoryGridContainer {
+      grid-template-columns: 1fr !important;
+    }
 
-@media screen and (max-width: 375px) {
-  .CategoryGridContainer {
-    grid-template-columns: 1fr !important;
-  }
-
-  .SubCategoryGridContainer {
-    grid-template-columns: 1fr !important;
-  }
-
-  .DetailFlex {
-    flex-wrap: wrap;
-    flex-direction: column-reverse;
-  }
-
-  .button {
-    width: 100%;
-  }
-
-  .DetailItem {
-    h2 {
-      padding: 0 12% 0 0;
+    .SubCategoryGridContainer {
+      grid-template-columns: 1fr !important;
     }
 
     .DetailFlex {
-      .DetailLeft {
-        width: 70%;
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+    }
 
-        h2 {
-          margin: 0;
-          padding: 8% 0;
-          text-align: center;
-        }
+    .button {
+      width: 100%;
+    }
 
-        ul {
-          li {
-            margin: 0 0 0 10%;
+    .DetailItem {
+      h2 {
+        padding: 0 12% 0 0;
+      }
+
+      .DetailFlex {
+        .DetailLeft {
+          width: 70%;
+
+          h2 {
+            margin: 0;
+            padding: 8% 0;
+            text-align: center;
+          }
+
+          ul {
+            li {
+              margin: 0 0 0 10%;
+            }
           }
         }
       }
     }
-  }
 
-  .SubCategory {
-    h1 {
-      font-size: 2.6vh;
-      padding: 0 0 2% 13%;
-    }
+    .SubCategory {
+      h1 {
+        font-size: 2.6vh;
+        padding: 0 0 2% 13%;
+      }
 
-    .SubCategoryGridContainer {
-      justify-items: center;
+      .SubCategoryGridContainer {
+        justify-items: center;
 
-      .SubCategoryItem {
-        p {
-          font-size: 4.5vh;
+        .SubCategoryItem {
+          p {
+            font-size: 4.5vh;
+          }
         }
       }
     }
