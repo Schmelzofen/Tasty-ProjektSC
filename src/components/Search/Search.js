@@ -1,62 +1,34 @@
 import React, { Component } from 'react';
+import navLogo from "../../img/nav.png"
 import { Link } from "react-router-dom"
-import Meals from "../../json/Meals.json"
-import { v4 as uuidv4 } from 'uuid';
-import SubCategoryTemplate from "../SubCategory/SubCategoryTemplate"
-import Header from "../Header/Header"
 let tempArray = []
 let field = ''
-
-
-class Search extends React.Component {
+class Header extends Component {
     state = {
-        meals: Meals.meals,
-        results: [],
+
     }
-   
-     
-    
-    search = () => {
-        
-        tempArray = []
-        this.setState({ results: [] })
-        let input = document.getElementById('field')
-        field = input.value
-        field = field.toLowerCase()
-        console.log(field);
-        
-        for (let i = 0; i < this.state.meals.length; i++) {
-            if ((this.state.meals[i].strMeal.toLowerCase()).includes(field)) {
-                tempArray.push(this.state.meals[i]);
-                console.log(this.state.meals[i]);
-            }
-           
-        }
-        this.setState({ results: tempArray })
-    
-    }
-    searchnew=()=>{
-        const timer=setTimeout(() =>{
-        this.search()
-    },1000)
+    componentDidUpdate(){
+        field = this.state.inpValue
     }
     render() {
-       
-        
-        
-        return (
-            <div>
-                
-               <Header search={this.searchnew}/>
-                {this.state.results.map(e=>
-                <div>
-                    <p>{e.strMeal}</p>
-                    <img src={e.strMealThumb} alt="" />
-                    </div>
-                    )}
+        // by pressing Enter on input it triggers click on button
+        let keyDown =  (e) =>{
+            let searchButton = document.getElementById('searchButton')
+            if (e.key === 'Enter') {
+              searchButton.click();
+            }
+          }
 
-            </div>
-        )
+        return (
+            <section className="Header">
+                <Link to="/"><img src={navLogo} alt="navLogo" /></Link>
+                <h1>Find a recipe, an idea, an inspiration...</h1>
+                <input onChange={event=>{ this.setState({inpValue: event.target.value})}} onKeyDown={keyDown} id="field" type="text" placeholder="Type something to search" />
+                <Link to={`/search/${this.state.inpValue}`} ><button id='searchButton' >Search</button></Link>
+            </section>
+        );
     }
 }
-export default Search;
+
+export { field, tempArray };
+export default Header;
