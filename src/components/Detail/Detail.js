@@ -1,5 +1,6 @@
+
 import DetailTemplate from "./DetailTemplate"
-import React, { Component } from 'react';
+import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 let strIngredient = [];
 let strMeasure = [];
@@ -33,7 +34,8 @@ class Detail extends React.Component {
             for (let i = 0; i < 20; i++) {
                 let n = `strIngredient${i}`
                 let ne = `e.${n}`
-                if (eval(ne)) {
+                let a = eval(ne);
+                if (a) {
                     strIngredient.push(eval(ne))
                 }
             }
@@ -43,8 +45,9 @@ class Detail extends React.Component {
             for (let i = 0; i < 20; i++) {
                 let n = `strMeasure${i}`
                 let ne = `e.${n}`
-                if (eval(ne)) {
-                    strMeasure.push(eval(ne))
+                let a = eval(ne);
+                if (a) {
+                    strMeasure.push(a)
                 }
             }
         });
