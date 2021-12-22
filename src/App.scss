@@ -108,11 +108,14 @@
 
     .SubCategoryItem {
       border-radius: 10px;
+      width: 100%;
+      margin: 5%;
 
       p {
         padding: 5% 5% 18% 15%;
         font-weight: bolder;
         font-size: 3.2vw;
+        height: 14vh;
       }
 
       img {
@@ -142,11 +145,18 @@
   color: white;
 
   h2 {
-    padding: 1% 0 1% 21%;
+    padding: 2% 0;
   }
+
 
   img {
     width: 90%;
+  }
+
+  .DetailNameIng {
+    text-align: right;
+    margin: 0% 21% 0 0;
+    padding: 1% 0;
   }
 
   .DetailFlex {
@@ -157,6 +167,16 @@
       width: 50%;
       text-align: left;
       padding: 2% 0% 0% 5.2%;
+
+      h2 {
+        margin-top: -60px;
+      }
+
+      ul {
+        li {
+          padding: 0 0 5px 0;
+        }
+      }
 
       h2 {
         padding: 0 0 5% 0;
@@ -208,8 +228,14 @@
   background: white;
   border: none;
   border-radius: 5px;
-  height: 5vh;
-  margin: 10% 0 0 10%;
+  width: 13vw;
+  height: 6vh;
+  margin: 20% 0 0 20%;
+  transition: .3s;
+
+  &:active {
+    transform: scale(.85);
+  }
 
   a {
     color: #FF6E86;
@@ -218,38 +244,13 @@
 
 }
 
-.SubCategoryItem {
-  border-radius: 10px;
-  margin: 5%;
-
-  p {
-    padding: 5% 3% 3% 15%;
-    font-weight: bolder;
-    font-size: 2.2rem;
-    height: 14vh;
-  }
-
-  img {
-    width: 80%;
-    margin: 0 0 5% 5%;
-    padding: 5% 0 4% 10%;
-  }
-
-  &:nth-of-type(odd) {
-    background: #FF6E86;
-  }
-
-  &:nth-of-type(even) {
-    background: #FFAC61;
-  }
-}
-
 .RandomBox {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2.5rem;
   font-weight: bold;
+  height: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -260,6 +261,43 @@
   .SubCategoryGridContainer {
     grid-template-columns: 1fr 1fr !important;
   }
+
+  .RandomBox {
+    height: 20vh;
+  }
+
+  .Header {
+    h1 {
+      font-size: 2.8vh;
+    }
+  }
+
+  .Category {
+    h1 {
+      font-size: 2.6vh;
+      padding: 0 0 2% 13%;
+    }
+  }
+
+  .SubCategory {
+    h1 {
+      font-size: 2.6vh;
+      padding: 0 0 2% 13%;
+    }
+
+    .SubCategoryGridContainer {
+      justify-items: center;
+    }
+  }
+
+  .DetailItem {
+    margin: 0 5%;
+  }
+
+  .Footer {
+    margin: 5% 0 0 0;
+  }
+
 }
 
 @media screen and (max-width: 375px) {
@@ -269,5 +307,34 @@
 
   .SubCategoryGridContainer {
     grid-template-columns: 1fr !important;
+  }
+
+  .DetailFlex {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .DetailItem {
+    .DetailFlex {
+      .DetailLeft {
+        width: 70%;
+
+        h2 {
+          margin: 0;
+          padding: 1% 0 8% 0;
+          text-align: center;
+        }
+
+        ul {
+          li {
+            margin: 0 0 0 10%;
+          }
+        }
+      }
+    }
   }
 }

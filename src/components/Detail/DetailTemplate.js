@@ -3,16 +3,18 @@ import { strMeasure } from "./Detail";
 import { strDesc } from "./Detail";
 
 
-const DetailTemplate = ({ youtube, name, picture, instructions, zutat, zutat1, zutat2, zutat3, zutat4, zutat5, zutat6, zutat7, zutat8, zutat9, zutat10, zutat11, zutat12, zutat13, zutat14, zutat15, mass1, mass2, mass3, mass4, mass5, mass6, mass7, mass8, mass9, mass10, mass11, mass12, mass13, mass14, mass15 }) => {
+const DetailTemplate = ({ youtube, name, picture }) => {
 
     return (
 
         < section className="DetailItem" >
             <img src={picture} alt={name} />
-            <h2>Ingredients</h2>
+            <div className="DetailNameIng">
+                <h2>Ingredients</h2>
+            </div>
             <section className="DetailFlex">
                 <article className="DetailLeft">
-
+                    <h2>{name}</h2>
                     <ul>
                         {strDesc.map(e =>
 
