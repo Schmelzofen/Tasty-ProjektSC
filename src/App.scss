@@ -258,8 +258,17 @@
     grid-template-columns: 1fr 1fr !important;
   }
 
-  .SubCategoryGridContainer {
-    grid-template-columns: 1fr 1fr !important;
+  .SubCategory {
+    .SubCategoryGridContainer {
+      grid-template-columns: 1fr 1fr !important;
+      margin: 0 5%;
+
+      .SubCategoryItem {
+        p {
+          font-size: 1vh;
+        }
+      }
+    }
   }
 
   .RandomBox {
@@ -268,7 +277,7 @@
 
   .Header {
     h1 {
-      font-size: 2.8vh;
+      font-size: 5.2vh;
     }
   }
 
@@ -281,17 +290,35 @@
 
   .SubCategory {
     h1 {
-      font-size: 2.6vh;
-      padding: 0 0 2% 13%;
+      font-size: 4vh !important;
+      padding: 0 0 2% 10% !important;
     }
 
     .SubCategoryGridContainer {
       justify-items: center;
+
+      .SubCategoryItem {
+        p {
+          font-size: 3.3vh !important;
+          height: 15vh;
+          padding: 5% 10% 18% 15%;
+        }
+      }
     }
   }
 
   .DetailItem {
     margin: 0 5%;
+
+    .DetailFlex {
+      .DetailLeft {
+        padding: 1% 0 0 5%;
+      }
+
+      .DetailRight {
+        margin-left: 6%;
+      }
+    }
   }
 
   .Footer {
@@ -319,13 +346,17 @@
   }
 
   .DetailItem {
+    h2 {
+      padding: 0 12% 0 0;
+    }
+
     .DetailFlex {
       .DetailLeft {
         width: 70%;
 
         h2 {
           margin: 0;
-          padding: 1% 0 8% 0;
+          padding: 8% 0;
           text-align: center;
         }
 
@@ -333,6 +364,23 @@
           li {
             margin: 0 0 0 10%;
           }
+        }
+      }
+    }
+  }
+
+  .SubCategory {
+    h1 {
+      font-size: 2.6vh;
+      padding: 0 0 2% 13%;
+    }
+
+    .SubCategoryGridContainer {
+      justify-items: center;
+
+      .SubCategoryItem {
+        p {
+          font-size: 4.5vh;
         }
       }
     }
