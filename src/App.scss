@@ -14,7 +14,7 @@
 
   h1 {
     padding: 2% 0;
-    font-size: 3.7rem;
+    font-size: 5vw;
   }
 
   input {
@@ -240,4 +240,24 @@
   align-items: center;
   font-size: 2.5rem;
   font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .CategoryGridContainer {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .SubCategoryGridContainer {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .CategoryGridContainer {
+    grid-template-columns: 1fr !important;
+  }
+
+  .SubCategoryGridContainer {
+    grid-template-columns: 1fr !important;
+  }
 }
