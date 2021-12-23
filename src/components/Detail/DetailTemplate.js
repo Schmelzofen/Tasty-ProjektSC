@@ -42,9 +42,9 @@ const DetailTemplate = ({ youtube, name, picture }) => {
                         </div>
                     </ul>
 
-                    <button className="button"><a href={youtube}>Watch on YouTube</a></button>
                 </article>
             </section>
+            <button className="button"><a href={youtube}>Watch on YouTube</a></button>
         </section >
     );
 }

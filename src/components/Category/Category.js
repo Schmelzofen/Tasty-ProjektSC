@@ -2,6 +2,7 @@ import CategoryTemplate from "./CategoryTemplate"
 import React from 'react';
 import { Link } from "react-router-dom"
 import Meals from '../../json/Meals.json'
+// import { Meals } from "../../json/ApiMeals";
 
 class Category extends React.Component {
     constructor(props) {
